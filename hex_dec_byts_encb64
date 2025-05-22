@@ -1,0 +1,15 @@
+#hexadecimal -> decode -> bytes -> encode Base64.
+
+import base64
+
+# Passo 1: String em hexadecimal
+hex_string = "72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf"  # crypto{hex_to_b64_encode}
+
+# Passo 2: Converter hex para bytes
+byte_data = bytes.fromhex(hex_string)
+
+# Passo 3: Codificar os bytes para base64
+b64_encoded = base64.b64encode(byte_data)
+
+# Passo 4: Exibir resultado final como string
+print(b64_encoded.decode())  # Y3J5cHRve2hleF90b182NF9lbmNvZGV9
